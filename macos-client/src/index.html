@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SameSame Input Forwarder</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>SameSame Input Forwarder</h1>
+
+      <div class="status-section">
+        <div id="mode" class="mode macos">🖥️ macOS Mode</div>
+        <div id="status" class="status disconnected">⭕ Not connected</div>
+      </div>
+
+      <div class="info-box">
+        <p><strong>Hotkey:</strong> Press <kbd>Option</kbd> + <kbd>1</kbd> to toggle between macOS and Windows mode</p>
+        <p><strong>Note:</strong> When in Windows mode, all input is forwarded to the Windows laptop</p>
+      </div>
+
+      <div class="connection-section">
+        <h2>Windows Server Connection</h2>
+
+        <div class="input-group">
+          <label for="server-ip">Server IP:</label>
+          <input id="server-ip" type="text" placeholder="192.168.1.100" value="192.168.1.100" />
+        </div>
+
+        <div class="input-group">
+          <label for="port">Port:</label>
+          <input id="port" type="number" placeholder="24800" value="24800" />
+        </div>
+
+        <div class="button-group">
+          <button id="connect-btn" class="btn btn-primary">Connect</button>
+          <button id="disconnect-btn" class="btn btn-secondary" disabled>Disconnect</button>
+        </div>
+      </div>
+
+      <div class="features-section">
+        <h3>Features</h3>
+        <ul>
+          <li>✅ Keyboard forwarding (German layout)</li>
+          <li>✅ Mouse/Trackpad movement</li>
+          <li>✅ 2-finger scroll (inverted for Windows)</li>
+          <li>✅ 4-finger swipe gestures (Desktop switching)</li>
+          <li>✅ Cmd → Ctrl, Option → Alt mapping</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
